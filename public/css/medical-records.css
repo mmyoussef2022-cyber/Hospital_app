@@ -1,0 +1,515 @@
+/* Medical Records Custom Styles */
+
+/* Visit Type Badge Colors */
+.badge.bg-primary {
+    background-color: #0d6efd !important;
+    color: white !important;
+}
+
+.badge.bg-success {
+    background-color: #198754 !important;
+    color: white !important;
+}
+
+.badge.bg-danger {
+    background-color: #dc3545 !important;
+    color: white !important;
+}
+
+.badge.bg-info {
+    background-color: #0dcaf0 !important;
+    color: black !important;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: black !important;
+}
+
+.badge.bg-secondary {
+    background-color: #6c757d !important;
+    color: white !important;
+}
+
+/* Button Styles */
+.btn-outline-info {
+    color: #0dcaf0;
+    border-color: #0dcaf0;
+}
+
+.btn-outline-info:hover {
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+    color: white;
+}
+
+.btn-outline-success {
+    color: #198754;
+    border-color: #198754;
+}
+
+.btn-outline-success:hover {
+    background-color: #198754;
+    border-color: #198754;
+    color: white;
+}
+
+.btn-outline-warning {
+    color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-outline-warning:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: black;
+}
+
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+/* Table Improvements */
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.btn-group .btn {
+    margin-right: 2px;
+}
+
+.btn-group .btn:last-child {
+    margin-right: 0;
+}
+
+/* Badge spacing */
+.badge {
+    font-size: 0.75em;
+    padding: 0.35em 0.65em;
+}
+
+/* Fix for diagnosis badges - ensure readable text */
+.badge-light {
+    background-color: #f8f9fa !important;
+    color: #495057 !important;
+    border: 1px solid #dee2e6 !important;
+}
+
+/* Table text colors - ensure all text is readable */
+.table td {
+    color: #212529 !important;
+}
+
+.table tbody tr td {
+    color: #495057 !important;
+}
+
+/* Ensure good contrast for all table content */
+.table tbody tr:hover td {
+    background-color: #f8f9fa !important;
+}
+
+.table tbody tr:hover .diagnosis-badge,
+.table tbody tr:hover .diagnosis-text,
+.table tbody tr:hover .treatment-text {
+    color: #212529 !important;
+}
+
+/* Diagnosis specific styling */
+.diagnosis-badge {
+    background-color: #e9ecef !important;
+    color: #495057 !important;
+    border: 1px solid #ced4da !important;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    display: inline-block;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    transition: all 0.15s ease-in-out;
+    font-size: 0.75em;
+    padding: 0.35em 0.65em;
+}
+
+.diagnosis-badge:hover {
+    background-color: #dee2e6 !important;
+    border-color: #adb5bd !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Multiple diagnosis container */
+.diagnosis-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: flex-start;
+}
+
+/* Treatment text styling */
+.treatment-text {
+    color: #495057 !important;
+    font-weight: 500;
+}
+
+/* Medication link styling */
+.medication-link {
+    display: inline-flex;
+    align-items: center;
+    color: #0d6efd !important;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.15s ease-in-out;
+    margin-top: 4px;
+}
+
+.medication-link:hover {
+    color: #0a58ca !important;
+    background-color: #e7f1ff;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.medication-link i {
+    margin-right: 4px;
+    font-size: 0.9em;
+}
+
+[dir="rtl"] .medication-link i {
+    margin-left: 4px;
+    margin-right: 0;
+}
+
+/* Treatment container for multiple elements */
+.treatment-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Badge for prescription count */
+.prescription-count {
+    background-color: #0d6efd;
+    color: white;
+    font-size: 0.7em;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 4px;
+}
+
+[dir="rtl"] .prescription-count {
+    margin-right: 4px;
+    margin-left: 0;
+}
+
+/* Responsive treatment display */
+@media (max-width: 768px) {
+    .treatment-container {
+        align-items: flex-start;
+    }
+    
+    .medication-link {
+        font-size: 0.85em;
+        padding: 4px 8px;
+    }
+}
+
+/* Diagnosis text styling for non-array diagnosis */
+.diagnosis-text {
+    color: #495057 !important;
+    font-weight: 500;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        margin-bottom: 2px;
+        margin-right: 0;
+    }
+}
+
+/* RTL Support for Arabic */
+[dir="rtl"] .diagnosis-badge {
+    margin-left: 4px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .diagnosis-container {
+    direction: rtl;
+}
+
+[dir="rtl"] .btn-group .btn {
+    margin-left: 2px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .btn-group .btn:last-child {
+    margin-left: 0;
+}
+
+/* Responsive diagnosis display */
+@media (max-width: 768px) {
+    .diagnosis-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .diagnosis-badge {
+        margin-bottom: 4px;
+        text-align: center;
+    }
+}
+
+/* Loading indicator */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.loading-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #0d6efd;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Enhanced table responsiveness */
+@media (max-width: 992px) {
+    .table-responsive {
+        font-size: 0.9em;
+    }
+    
+    .table th,
+    .table td {
+        padding: 0.5rem 0.25rem;
+    }
+    
+    .btn-group .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.85em;
+    }
+    
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .card-tools .btn {
+        padding: 0.375rem 0.5rem;
+        font-size: 0.85em;
+    }
+    
+    /* Stack table content vertically on very small screens */
+    .table thead {
+        display: none;
+    }
+    
+    .table tbody tr {
+        display: block;
+        border: 1px solid #dee2e6;
+        margin-bottom: 1rem;
+        border-radius: 0.375rem;
+        padding: 0.75rem;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .table tbody td {
+        display: block;
+        text-align: right !important;
+        border: none;
+        padding: 0.25rem 0;
+        position: relative;
+        padding-right: 40%;
+    }
+    
+    .table tbody td:before {
+        content: attr(data-label);
+        position: absolute;
+        right: 0;
+        width: 35%;
+        text-align: right;
+        font-weight: 600;
+        color: #495057;
+    }
+}
+
+/* RTL improvements for mobile */
+@media (max-width: 768px) {
+    [dir="rtl"] .table tbody td {
+        text-align: left !important;
+        padding-left: 40%;
+        padding-right: 0;
+    }
+    
+    [dir="rtl"] .table tbody td:before {
+        left: 0;
+        right: auto;
+        text-align: left;
+    }
+}
+
+/* Info box improvements */
+.info-box {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.info-box-content {
+    padding: 1rem;
+}
+
+.info-box-text {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+}
+
+.info-box-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.info-box-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    background: rgba(0,0,0,0.1);
+    color: white;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .info-box-number {
+        font-size: 1.2rem;
+    }
+    
+    .info-box-text {
+        font-size: 0.75rem;
+    }
+    
+    .info-box-icon {
+        width: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Enhanced card header */
+.card-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 2px solid #dee2e6;
+}
+
+.card-title {
+    color: #495057;
+    font-weight: 600;
+}
+
+/* Improved alert styling */
+.alert {
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+    color: #0c5460;
+}
+
+/* Enhanced pagination */
+.pagination {
+    justify-content: center;
+}
+
+.page-link {
+    border-radius: 0.375rem;
+    margin: 0 2px;
+    border: 1px solid #dee2e6;
+    color: #495057;
+}
+
+.page-link:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Accessibility improvements */
+.btn:focus,
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Print styles */
+@media print {
+    .loading-overlay,
+    .card-tools,
+    .btn-group,
+    .pagination {
+        display: none !important;
+    }
+    
+    .table {
+        font-size: 12px;
+    }
+    
+    .card {
+        border: none;
+        box-shadow: none;
+    }
+}

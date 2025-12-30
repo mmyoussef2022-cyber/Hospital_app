@@ -1,0 +1,531 @@
+/* ========================================
+   Hospital Management System - Themes
+   ======================================== */
+
+:root {
+    /* Facebook Theme */
+    --facebook-primary: #1877F2;
+    --facebook-secondary: #42A5F5;
+    --facebook-dark: #166FE5;
+    --facebook-light: #E3F2FD;
+    --facebook-gray: #F0F2F5;
+    --facebook-dark-gray: #65676B;
+    
+    /* Medical Theme */
+    --medical-primary: #00BCD4;
+    --medical-secondary: #4DD0E1;
+    --medical-dark: #0097A7;
+    --medical-light: #E0F7FA;
+    --medical-gray: #F1F8E9;
+    --medical-dark-gray: #546E7A;
+    
+    /* Professional Theme */
+    --professional-primary: #2E7D32;
+    --professional-secondary: #66BB6A;
+    --professional-dark: #1B5E20;
+    --professional-light: #E8F5E8;
+    --professional-gray: #F3F4F6;
+    --professional-dark-gray: #4A5568;
+    
+    /* Dark Theme */
+    --dark-primary: #6366F1;
+    --dark-secondary: #8B5CF6;
+    --dark-dark: #4F46E5;
+    --dark-light: #1F2937;
+    --dark-gray: #111827;
+    --dark-dark-gray: #9CA3AF;
+    
+    /* Common Variables */
+    --sidebar-width: 280px;
+    --sidebar-mini-width: 70px;
+    --header-height: 70px;
+    --border-radius: 12px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Cairo', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="ltr"] {
+    text-align: left;
+}
+
+/* ========================================
+   Facebook Theme
+   ======================================== */
+
+.theme-facebook {
+    --primary: var(--facebook-primary);
+    --secondary: var(--facebook-secondary);
+    --dark: var(--facebook-dark);
+    --light: var(--facebook-light);
+    --gray: var(--facebook-gray);
+    --dark-gray: var(--facebook-dark-gray);
+    --text-primary: #1C1E21;
+    --text-secondary: #65676B;
+    --bg-primary: #FFFFFF;
+    --bg-secondary: var(--facebook-gray);
+}
+
+/* ========================================
+   Medical Theme
+   ======================================== */
+
+.theme-medical {
+    --primary: var(--medical-primary);
+    --secondary: var(--medical-secondary);
+    --dark: var(--medical-dark);
+    --light: var(--medical-light);
+    --gray: var(--medical-gray);
+    --dark-gray: var(--medical-dark-gray);
+    --text-primary: #263238;
+    --text-secondary: #546E7A;
+    --bg-primary: #FFFFFF;
+    --bg-secondary: var(--medical-gray);
+}
+
+/* ========================================
+   Professional Theme
+   ======================================== */
+
+.theme-professional {
+    --primary: var(--professional-primary);
+    --secondary: var(--professional-secondary);
+    --dark: var(--professional-dark);
+    --light: var(--professional-light);
+    --gray: var(--professional-gray);
+    --dark-gray: var(--professional-dark-gray);
+    --text-primary: #1A202C;
+    --text-secondary: #4A5568;
+    --bg-primary: #FFFFFF;
+    --bg-secondary: var(--professional-gray);
+}
+
+/* ========================================
+   Dark Theme
+   ======================================== */
+
+.theme-dark {
+    --primary: var(--dark-primary);
+    --secondary: var(--dark-secondary);
+    --dark: var(--dark-dark);
+    --light: var(--dark-light);
+    --gray: var(--dark-gray);
+    --dark-gray: var(--dark-dark-gray);
+    --text-primary: #F9FAFB;
+    --text-secondary: #D1D5DB;
+    --bg-primary: #1F2937;
+    --bg-secondary: var(--dark-gray);
+}
+
+/* ========================================
+   Layout Components
+   ======================================== */
+
+/* Header */
+.modern-header {
+    height: var(--header-height);
+    background: var(--bg-primary);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+[dir="rtl"] .modern-header {
+    padding: 0 1.5rem 0 var(--sidebar-width);
+}
+
+[dir="ltr"] .modern-header {
+    padding: 0 var(--sidebar-width) 0 1.5rem;
+}
+
+/* Sidebar */
+.modern-sidebar {
+    position: fixed;
+    top: var(--header-height);
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--header-height));
+    background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+    z-index: 999;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+[dir="rtl"] .modern-sidebar {
+    right: 0;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+[dir="ltr"] .modern-sidebar {
+    left: 0;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Mini Mode */
+.modern-sidebar.mini {
+    width: var(--sidebar-mini-width);
+}
+
+/* Main Content */
+.modern-content {
+    margin-top: var(--header-height);
+    padding: 2rem;
+    background: var(--bg-secondary);
+    min-height: calc(100vh - var(--header-height));
+    transition: all 0.3s ease;
+}
+
+[dir="rtl"] .modern-content {
+    margin-right: var(--sidebar-width);
+}
+
+[dir="ltr"] .modern-content {
+    margin-left: var(--sidebar-width);
+}
+
+[dir="rtl"] .modern-sidebar.mini ~ .modern-content {
+    margin-right: var(--sidebar-mini-width);
+}
+
+[dir="ltr"] .modern-sidebar.mini ~ .modern-content {
+    margin-left: var(--sidebar-mini-width);
+}
+
+/* ========================================
+   Sidebar Navigation
+   ======================================== */
+
+.sidebar-nav {
+    padding: 1rem 0;
+}
+
+.nav-section {
+    margin-bottom: 2rem;
+}
+
+.nav-section-title {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.nav-item {
+    margin-bottom: 0.25rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.nav-link.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: white;
+}
+
+[dir="rtl"] .nav-link.active::before {
+    right: 0;
+}
+
+[dir="ltr"] .nav-link.active::before {
+    left: 0;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+[dir="rtl"] .nav-icon {
+    margin-left: 0.75rem;
+}
+
+[dir="ltr"] .nav-icon {
+    margin-right: 0.75rem;
+}
+
+.nav-text {
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* ========================================
+   Cards and Components
+   ======================================== */
+
+.modern-card {
+    background: var(--bg-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: none;
+    overflow: hidden;
+}
+
+.modern-card-header {
+    background: var(--light);
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modern-card-body {
+    padding: 1.5rem;
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.btn-modern {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary-modern {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary-modern:hover {
+    background: var(--dark);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ========================================
+   Forms
+   ======================================== */
+
+.form-control-modern {
+    border-radius: 8px;
+    border: 2px solid #E5E7EB;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control-modern:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(var(--primary), 0.1);
+    outline: none;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 768px) {
+    .modern-sidebar {
+        transform: translateX(-100%);
+    }
+    
+    [dir="rtl"] .modern-sidebar {
+        transform: translateX(100%);
+    }
+    
+    .modern-sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .modern-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    [dir="rtl"] .modern-header {
+        padding: 0 1.5rem;
+    }
+    
+    [dir="ltr"] .modern-header {
+        padding: 0 1.5rem;
+    }
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.3s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.3s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* ========================================
+   Theme Toggle
+   ======================================== */
+
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1001;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   Language Toggle
+   ======================================== */
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 0.25rem;
+}
+
+.language-option {
+    padding: 0.5rem 1rem;
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.language-option.active {
+    background: white;
+    color: var(--primary);
+}
+
+/* ========================================
+   Utilities
+   ======================================== */
+
+.text-primary-theme {
+    color: var(--primary) !important;
+}
+
+.bg-primary-theme {
+    background-color: var(--primary) !important;
+}
+
+.border-primary-theme {
+    border-color: var(--primary) !important;
+}
+
+.shadow-modern {
+    box-shadow: var(--shadow) !important;
+}
+
+.shadow-lg-modern {
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.rounded-modern {
+    border-radius: var(--border-radius) !important;
+}
