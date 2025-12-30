@@ -1,9 +1,20 @@
 {
     "name": "hospital/management-system",
     "type": "project",
-    "description": "Comprehensive Hospital Management System built with Laravel",
-    "keywords": ["laravel", "hospital", "management", "healthcare", "medical"],
+    "description": "Comprehensive Hospital Management System built with Laravel for healthcare sector",
+    "keywords": ["laravel", "hospital", "management", "healthcare", "medical", "egypt"],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohamed Youssef",
+            "email": "myoussef400@gmail.com"
+        }
+    ],
+    "support": {
+        "email": "myoussef400@gmail.com",
+        "issues": "https://github.com/myouseef/Dental_app/issues",
+        "source": "https://github.com/myouseef/Dental_app"
+    },
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.2",

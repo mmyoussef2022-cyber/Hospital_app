@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\LabSpecializedController;
 use App\Http\Controllers\RadiologySpecializedController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\SupportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -1155,3 +1156,12 @@ Route::middleware(['auth', 'permission:landing-page.manage'])->prefix('admin/lan
     Route::post('/clear-cache', [\App\Http\Controllers\LandingPageAdminController::class, 'clearCache'])
          ->name('clear-cache');
 });
+
+// Support Routes
+Route::middleware(['auth'])->group(function () {
+    Route::get('/support', [SupportController::class, 'index'])->name('support.index');
+    Route::get('/api/support-info', [SupportController::class, 'getSupportInfo'])->name('support.info');
+});
+
+// Public Support Route
+Route::get('/support-info', [SupportController::class, 'getSupportInfo'])->name('public.support.info');

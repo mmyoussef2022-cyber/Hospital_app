@@ -11,6 +11,15 @@ return [
     'fallback_locale' => 'en',
     'faker_locale' => 'ar_SA',
     
+    // Support Information
+    'support' => [
+        'email' => 'myoussef400@gmail.com',
+        'phone' => '+21095754085',
+        'website' => 'https://hospital-hms.com',
+        'developer' => 'Mohamed Youssef',
+        'country' => 'Egypt',
+    ],
+    
     'key' => env('APP_KEY'),
     'cipher' => 'AES-256-CBC',
     

@@ -1221,6 +1221,18 @@
                     </div>
                 </div>
                 @endcan
+
+                <div class="mini-nav-divider"></div>
+
+                <!-- الدعم والمساعدة -->
+                <div class="mini-nav-item">
+                    <a class="mini-nav-link {{ request()->routeIs('support.*') ? 'active' : '' }}" 
+                       href="{{ route('support.index') }}">
+                        <i class="mini-nav-icon fas fa-headset"></i>
+                        <span class="mini-nav-text">الدعم والمساعدة</span>
+                        <div class="mini-nav-tooltip">الحصول على المساعدة والدعم الفني</div>
+                    </a>
+                </div>
             </div>
         </div>
 
