@@ -1,0 +1,77 @@
+{
+  "name": "Hospital Management System",
+  "description": "Complete Hospital Management System built with Laravel - نظام إدارة المستشفيات الشامل",
+  "keywords": ["laravel", "hospital", "management", "healthcare", "php", "mysql", "arabic"],
+  "website": "https://github.com/mmyoussef2022-cyber/Hospital_app",
+  "repository": "https://github.com/mmyoussef2022-cyber/Hospital_app",
+  "logo": "https://laravel.com/img/logomark.min.svg",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "php artisan migrate --force && php artisan db:seed --force"
+  },
+  "env": {
+    "APP_NAME": {
+      "value": "Hospital Management System"
+    },
+    "APP_ENV": {
+      "value": "production"
+    },
+    "APP_DEBUG": {
+      "value": "false"
+    },
+    "APP_KEY": {
+      "description": "Laravel Application Key - Generate with: php artisan key:generate --show",
+      "generator": "secret"
+    },
+    "LOG_LEVEL": {
+      "value": "error"
+    },
+    "SESSION_DRIVER": {
+      "value": "database"
+    },
+    "CACHE_DRIVER": {
+      "value": "database"
+    },
+    "QUEUE_CONNECTION": {
+      "value": "database"
+    },
+    "MAIL_MAILER": {
+      "value": "smtp"
+    },
+    "MAIL_HOST": {
+      "value": "smtp.gmail.com"
+    },
+    "MAIL_PORT": {
+      "value": "587"
+    },
+    "MAIL_USERNAME": {
+      "value": "myoussef400@gmail.com"
+    },
+    "MAIL_ENCRYPTION": {
+      "value": "tls"
+    },
+    "MAIL_FROM_ADDRESS": {
+      "value": "noreply@hospital.com"
+    },
+    "MAIL_FROM_NAME": {
+      "value": "Hospital Management System"
+    }
+  },
+  "addons": [
+    {
+      "plan": "cleardb:ignite",
+      "as": "CLEARDB"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
